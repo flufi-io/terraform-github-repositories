@@ -42,7 +42,7 @@ module "repository_from_template" {
   #ts:skip=AC_GITHUB_0002
   source      = "flufi-io/repository/github"
   version     = "0.0.3"
-  for_each    = var.repositories
+  for_each    = tomap(var.repositories)
   name        = each.value.name
   description = each.value.description
   #checkov:skip=CKV_GIT_1: The repository must be public
