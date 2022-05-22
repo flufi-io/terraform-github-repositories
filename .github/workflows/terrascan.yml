@@ -1,6 +1,10 @@
 name: terrascan
 on: [ push ]
 
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
 jobs:
   terrascan:
     runs-on: ubuntu-latest
