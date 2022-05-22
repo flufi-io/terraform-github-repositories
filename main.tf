@@ -39,13 +39,13 @@ module "template" {
 
 
 module "repository_from_template" {
+  #ts:skip=AC_GITHUB_0002
   source      = "flufi-io/repository/github"
   version     = "0.0.3"
   for_each    = var.repositories
   name        = each.value.name
   description = each.value.description
   #checkov:skip=CKV_GIT_1: The repository must be public
-  #ts:skip=AC_GITHUB_0002
   visibility            = try(each.value.visibility, local.defaults.visibility)
   template_files        = local.template_files
   template_files_prefix = local.template_files_prefix
