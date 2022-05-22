@@ -20,6 +20,7 @@ jobs:
           only_warn: true
           sarif_upload: true
           non_recursive: true
+          verbose: true
           #iac_dir:
           #policy_path:
           #skip_rules:
