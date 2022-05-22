@@ -1,3 +1,3 @@
-output "repository_name" {
-  value = module.repository.repository_name
-}
+#output "repository_name" {
+#  value =
+#}
