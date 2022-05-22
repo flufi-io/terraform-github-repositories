@@ -74,7 +74,7 @@ locals {
   }
 }
 module "template" {
-  source = "git@github.com:flufi-io/terraform-module-template.git?ref=v0.0.1"
+  source = "github.com/flufi-io/terraform-module-template?ref=v0.0.1"
 }
 
 
